@@ -1,0 +1,18 @@
+# Use root/example as user/password credentials
+# docker-compose -f docker.yml up
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+
+  fastapi:
+    image: emoji-finder
+    ports:
+      - 8000:5000
+    restart: always
