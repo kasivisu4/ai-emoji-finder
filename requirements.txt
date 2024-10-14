@@ -3,3 +3,5 @@ uvicorn
 requests
 pandas
 python-dotenv
+__pycache__/
+.venv/
